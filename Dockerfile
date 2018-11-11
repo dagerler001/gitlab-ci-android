@@ -11,7 +11,7 @@ MAINTAINER Jan Grewe <jan@faked.org>
 ENV VERSION_SDK_TOOLS "4333796"
 
 ENV ANDROID_HOME "/sdk"
-ENV PATH "$PATH:${ANDROID_HOME}/tools"
+ENV PATH=${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${PATH}
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -qq update && \
